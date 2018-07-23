@@ -1,0 +1,97 @@
+apt update
+apt upgrade
+setterm -foreground blue
+figlet PAQUETES
+setterm -foreground cyan
+echo "
+Paquetes de paquetes xd disponibles"
+echo "
+[1]Creador
+[2]Phishing
+[3]Clonador
+[4]Todos
+[5]Salir"
+
+setterm -foreground white
+read -p ">>" pack
+case $pack in
+
+
+1)
+figlet Creador
+echo 3
+sleep 1
+echo 2
+sleep 1
+echo 1
+sleep 1
+setterm -foreground yellow
+echo Instalando
+setterm -foreground white
+sleep 1
+apt install figlet
+sleep 1
+apt install nano
+sleep 1
+apt install vim
+sleep 1
+setterm -foreground yellow 
+echo Finalizado
+
+;;
+2)
+figlet Phishing
+echo 3
+sleep 1
+echo 2
+sleep 1
+echo 1
+sleep 1
+setterm -foreground yellow
+echo Instalando
+setterm -foreground white
+apt install git
+apt install python
+apt install python2
+sleep 1
+git clone http://github.com/evait-security/weeman
+setterm -foreground yellow
+echo Casi finalizado para descargar ngrok usa el otro script
+setterm -foreground white
+
+;;
+3)
+figlet Clonador
+sleep 1
+echo 3
+sleep 1
+echo 2
+sleep 1
+echo 1
+sleep 1
+setterm -foreground yellow
+echo Instalando
+setterm -foreground white
+apt install git
+apt install python2
+apt install python
+apt install wget
+setterm -foreground yellow
+echo Finalizado
+setterm -foreground white
+
+;;
+4)
+setterm -foreground red
+figlet En Prueba
+bash $HOME/pack
+;;
+5)
+exit 
+
+;;
+*)bash /data/data/com.termux/files/home/pack
+;;
+
+esac
+setterm -foreground white
